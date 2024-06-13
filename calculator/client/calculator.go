@@ -7,10 +7,10 @@ import (
 	pb "github.com/flavioesteves/grpc-microservices-go/calculator/proto"
 )
 
-func doSumCalculator(c pb.CalculatorSumServiceClient) {
-	log.Println("doSumCalculator was invoked")
+func doSum(c pb.CalculatorServiceClient) {
+	log.Println("doSum was invoked")
 
-	res, err := c.CalculatorSum(context.Background(), &pb.CalculatorRequest{
+	res, err := c.Sum(context.Background(), &pb.SumRequest{
 		FirstNumber:  3,
 		SecondNumber: 10,
 	})
