@@ -20,5 +20,6 @@ func main() {
 	defer connection.Close()
 
 	c := pb.NewCalculatorServiceClient(connection)
-	doSum(c)
+	//doSum(c)
+	doPrimes(c)
 }
