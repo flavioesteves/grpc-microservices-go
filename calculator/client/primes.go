@@ -8,7 +8,7 @@ import (
 	pb "github.com/flavioesteves/grpc-microservices-go/calculator/proto"
 )
 
-func primes(c pb.CalculatorServiceClient) {
+func doPrimes(c pb.CalculatorServiceClient) {
 	log.Println("primes was invoked")
 
 	stream, err := c.Primes(context.Background(), &pb.PrimeRequest{
